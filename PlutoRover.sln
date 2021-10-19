@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlutoRover", "src\PlutoRover\PlutoRover.csproj", "{6DE5E4D3-D216-458C-A766-50B39FA7AF96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlutoRover.UnitTests", "tests\PlutoRover.UnitTests\PlutoRover.UnitTests.csproj", "{56CD6027-764A-480A-9742-F86B4115F53E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DE5E4D3-D216-458C-A766-50B39FA7AF96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DE5E4D3-D216-458C-A766-50B39FA7AF96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DE5E4D3-D216-458C-A766-50B39FA7AF96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DE5E4D3-D216-458C-A766-50B39FA7AF96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56CD6027-764A-480A-9742-F86B4115F53E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56CD6027-764A-480A-9742-F86B4115F53E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56CD6027-764A-480A-9742-F86B4115F53E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56CD6027-764A-480A-9742-F86B4115F53E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
