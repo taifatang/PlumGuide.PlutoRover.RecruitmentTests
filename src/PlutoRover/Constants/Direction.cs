@@ -1,4 +1,4 @@
-﻿namespace PlutoRover
+﻿namespace PlutoRover.Constants
 {
     public enum Direction
     {

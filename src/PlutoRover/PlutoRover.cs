@@ -1,77 +1,38 @@
-﻿using System;
+﻿using PlutoRover.Constants;
+using PlutoRover.Model;
 
 namespace PlutoRover
 {
-
     public class PlutoRover
     {
-        private int _orientation;
-        public int X { get; private set; }
-        public int Y { get; private set; }
+        private readonly Grid _grid;
+        public Coordinate Coordinate { get; }
 
-        public int Orientation
+        public PlutoRover(Coordinate coordinate, Grid grid)
         {
-            get => _orientation % 360;
-        }
-
-        public PlutoRover(int x, int y, int orientation)
-        {
-            X = x;
-            Y = y;
-            _orientation = orientation;
-        }
-
-        private void Turn(char direction)
-        {
-            if (direction == 'L')
-            {
-                _orientation += 270;
-            }
-            else
-            {
-                _orientation += 90;
-            }
-
-        }
-
-        private Direction GetCurrentDirection()
-        {
-            return (Direction)Math.Abs(Orientation / 90 % 4);
+            _grid = grid;
+            Coordinate = coordinate;
         }
 
         public void Execute(string s)
         {
             foreach (char command in s)
             {
-                if (command == 'F')
+                if (command == Command.Forward)
                 {
-                    var facing = GetCurrentDirection();
-
-                    switch (facing)
-                    {
-                        case Direction.N:
-                            X += 1;
-                            break;
-                        case Direction.E:
-                            Y += 1;
-                            break;
-                        case Direction.S:
-                            X -= 1;
-                            break;
-                        case Direction.W:
-                            Y -= 1;
-                            break;
-                    }
+                    Coordinate.Walk(1, _grid);
                 }
-
-                else if (command == 'B')
+                else if (command == Command.Backward)
                 {
-                    X -= 1;
+                    Coordinate.Walk(-1, _grid);
                 }
-
-                else if (command == 'L' || command == 'R')
+                else if (command == Command.Left)
                 {
-                    Turn(command);
+                    Coordinate.Turn(270);
+                }
+                else if (command == Command.Right)
+                {
+                    Coordinate.Turn(90);
                 }
             }
         }
