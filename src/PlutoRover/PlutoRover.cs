@@ -2,28 +2,50 @@
 
 namespace PlutoRover
 {
+
     public class PlutoRover
     {
         public int X { get; private set; }
         public int Y { get; private set; }
-        public string Orientation { get; private set; }
-        public PlutoRover(int x, int y, string orientation)
+        public int Orientation { get; private set; }
+
+        public PlutoRover(int x, int y, int orientation)
         {
             X = x;
             Y = y;
             Orientation = orientation;
         }
 
-        public void Execute(string s)
+        private void Turn(char direction)
         {
-            if (s == "F")
+            if (direction == 'L')
             {
-                X += 1;
+                Orientation -= 90;
+            }
+            else
+            {
+                Orientation += 90;
             }
 
-            if (s == "B")
+        }
+        public void Execute(string s)
+        {
+            foreach (char command in s)
             {
-                X -= 1;
+                if (command == 'F')
+                {
+                    X += 1;
+                }
+
+                if (command == 'B')
+                {
+                    X -= 1;
+                }
+
+                if (command == 'L' || command == 'R')
+                {
+                    Turn(command);
+                }
             }
         }
     }
