@@ -1,10 +1,8 @@
 ﻿namespace PlutoRover.Constants
 {
-    public enum Direction
+    public class TurnDirection
     {
-        N = 0,
-        E = 1,
-        S = 2,
-        W = 3
+        public const int Left = 270;
+        public const int Right = 90;
     }
 }
