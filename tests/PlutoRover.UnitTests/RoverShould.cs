@@ -8,7 +8,7 @@ using PlutoRover.Model;
 namespace PlutoRover.UnitTests
 {
     [TestFixture]
-    public class PlutoRoverShould
+    public class RoverShould
     {
         private Location _deploymentLocation;
         private Grid _standardGrid;
