@@ -116,7 +116,7 @@ namespace PlutoRover.UnitTests
         }
 
         [Test]
-        public void Stop_upon_detection_obstacle()
+        public void Stop_upon_obstacle_detection()
         {
             var grid = new Grid(new Coordinate(4, 4));
             grid.Add(new Obstacle(new Coordinate(2, 0)));
@@ -130,7 +130,7 @@ namespace PlutoRover.UnitTests
         }
 
         [Test]
-        public void Stop_upon_detection_obstacle_in_reverse()
+        public void Stop_upon_obstacle_detection_in_reverse()
         {
             var grid = new Grid(new Coordinate(4, 4));
             grid.Add(new Obstacle(new Coordinate(2, 0)));
@@ -144,7 +144,7 @@ namespace PlutoRover.UnitTests
         }
 
         [Test]
-        public void Carry_on_executing_remaining_command_when_obscured()
+        public void Carry_on_executing_remaining_commands_when_obstructed()
         {
             var grid = new Grid(new Coordinate(4, 4));
             grid.Add(new Obstacle(new Coordinate(2, 0)));
